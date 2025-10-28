@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diego Solorzano — Portfolio</title>
+  <meta name="description" content="Portfolio of Diego Solorzano — Electrical & Photonics Engineer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#home">Diego Solorzano</a>
+        <div class="navlinks">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="btn primary" href="#" id="resumeLink">Resume</a>
+          <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">🌗</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero grid cols-2">
+      <div>
+        <p class="muted">Portfolio</p>
+        <h1>Diego Solorzano</h1>
+        <p style="font-size:20px; margin:6px 0 12px">Electrical & Photonics Engineer</p>
+        <p class="muted">I build photonic devices, semiconductor experiments, and playful robotics.</p>
+        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn" id="githubLink" href="#">GitHub</a>
+          <a class="btn" id="linkedinLink" href="#">LinkedIn</a>
+          <a class="btn primary" id="emailLink" href="#">Email me</a>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="height:100%; display:flex; align-items:center; justify-content:center;">
+          <div class="p">Hero image or headshot goes here.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="projectGrid" class="grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));"></div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="grid cols-2" style="align-items:start">
+        <p class="muted">
+          I'm a fourth‑year EE at UCI focusing on semiconductors, photonics, and robotics. I like building end‑to‑end: simulation → hardware → testing → iteration.
+        </p>
+        <div class="skills" id="skills"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <form id="contactForm" class="grid" style="grid-template-columns:1fr; gap:12px">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Hello Diego, let's work together on..." required></textarea>
+          </div>
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap">
+            <button class="btn primary" type="submit">Send</button>
+            <a class="btn" id="mailtoDirect" href="#">or email me directly</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>© <span id="year"></span> Diego Solorzano. All rights reserved.</div>
+      <div style="display:flex; gap:12px">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>
