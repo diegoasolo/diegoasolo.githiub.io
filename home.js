@@ -2,15 +2,15 @@
 // ====== Quick personalization ======
 const LINKS = {
   resume: 'Diego_Solorzano_Resume.pdf',
-  github: 'https://github.com/yourhandle',
-  linkedin: 'https://www.linkedin.com/in/yourhandle/',
-  email: 'diego@example.com'
+  github: 'https://github.com/diegoasolo',
+  linkedin: 'https://www.linkedin.com/in/diegoasolo/',
+  email: 'diegoasolo12@gmail.com'
 };
 
 const PROJECTS = [
   {
     title: 'FogHacks — Adaptive Imaging Through Fog',
-    tags: ['Optics','GPU','Imaging'],
+    tags: ['Computational Optics','Neural Netowrks','Image Corection'],
     description: 'Computational imaging pipeline using phase modulation and PSF deconvolution; GPU-accelerated diffraction sims.',
     link: '#',
     image: 'https://images.unsplash.com/photo-1520975922284-8f31b0d0b9b5?q=80&w=1200&auto=format&fit=crop'
