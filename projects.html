@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Diego Solorzano</title>
+  <meta name="description" content="Projects by Diego Solorzano — Electrical & Photonics Engineer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="index.html">Diego Solorzano</a>
+        <div class="navlinks">
+          <a href="projects.html">Projects</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn primary" href="#" id="resumeLink">Resume</a>
+          <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">◑</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="padding-top: 64px;">
+      <div style="margin-bottom: 24px;">
+        <a href="index.html" style="color: var(--muted); font-size: 14px;">← Back to home</a>
+      </div>
+      <h1>Projects</h1>
+      <p class="muted" style="margin-top: 8px; margin-bottom: 32px;">A collection of my work in photonics, semiconductors, and robotics.</p>
+      <div id="projectGrid" class="grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>© <span id="year"></span> Diego Solorzano. All rights reserved.</div>
+      <div style="display:flex; gap:12px">
+        <a href="projects.html">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html">Back to home ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="projects.js"></script>
+</body>
+</html>
+
