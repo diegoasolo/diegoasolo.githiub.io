@@ -7,29 +7,7 @@ const LINKS = {
   email: 'diegoasolo12@gmail.com'
 };
 
-const PROJECTS = [
-  {
-    title: 'FogHacks — Adaptive Imaging Through Fog',
-    tags: ['Computational Optics','Neural Netowrks','Image Corection'],
-    description: 'Computational imaging pipeline using phase modulation and PSF deconvolution; GPU-accelerated diffraction sims.',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1520975922284-8f31b0d0b9b5?q=80&w=1200&auto=format&fit=crop'
-  },
-  {
-    title: 'hBN Quantum Emitters — PL Enhancement',
-    tags: ['Nanophotonics','hBN','FDTD'],
-    description: 'Gold nanorods + alumina spacer cavity to boost Purcell factor and control polarization for spin-defect readout.',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1554475901-4538ddfbccc2?q=80&w=1200&auto=format&fit=crop'
-  },
-  {
-    title: 'RushBot — Autonomous Recruitment Rover',
-    tags: ['Robotics','SLAM','Embedded'],
-    description: 'Interactive rover with SLAM navigation, manipulator arm, and on-device voice/chat interface for event engagement.',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop'
-  }
-];
+// Projects data is loaded from projects-data.js
 
 const SKILLS = ['Photonics','FDTD/Lumerical','COMSOL','MATLAB','Python','PCB Design','Embedded (ESP32)','Signal Processing','Optics Lab','Robotics'];
 
@@ -53,20 +31,25 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // ====== Projects render ======
 const grid = document.getElementById('projectGrid');
-function projCard(p){
-  const el = document.createElement('article');
-  el.className = 'card';
-  el.innerHTML = `
-    <img src="${p.image}" alt="Project thumbnail" loading="lazy"/>
-    <div class="p">
-      <h3 style="margin:0; font-size:18px">${p.title}</h3>
-      <p class="muted" style="margin:8px 0 0">${p.description}</p>
-      <div class="tags">${p.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
-      <div style="margin-top:10px"><a class="btn" href="${p.link}">Details →</a></div>
-    </div>`;
-  return el;
+if (grid) {
+  // Show only first 3 projects on home page, or all if less than 3
+  const projectsToShow = PROJECTS.slice(0, 3);
+  function projCard(p){
+    const el = document.createElement('article');
+    el.className = 'card';
+    const thumbnail = p.thumbnail || (p.media && p.media[0] && p.media[0].url) || '';
+    el.innerHTML = `
+      <img src="${thumbnail}" alt="Project thumbnail" loading="lazy"/>
+      <div class="p">
+        <h3 style="margin:0; font-size:18px">${p.title}</h3>
+        <p class="muted" style="margin:8px 0 0">${p.shortDescription || p.description}</p>
+        <div class="tags">${p.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+        <div style="margin-top:10px"><a class="btn" href="project-detail.html?id=${p.id}">Details →</a></div>
+      </div>`;
+    return el;
+  }
+  projectsToShow.forEach(p => grid.appendChild(projCard(p)));
 }
-PROJECTS.forEach(p => grid.appendChild(projCard(p)));
 
 // ====== Skills render ======
 const skillsEl = document.getElementById('skills');

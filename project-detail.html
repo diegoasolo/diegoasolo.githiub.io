@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project — Diego Solorzano</title>
+  <meta name="description" content="Project details — Diego Solorzano" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="index.html">Diego Solorzano</a>
+        <div class="navlinks">
+          <a href="projects.html">Projects</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn primary" href="#" id="resumeLink">Resume</a>
+          <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">◑</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="padding-top: 64px;">
+      <div style="margin-bottom: 24px;">
+        <a href="projects.html" style="color: var(--muted); font-size: 14px;">← Back to projects</a>
+      </div>
+      
+      <!-- Project Title and Tags -->
+      <div id="projectHeader" style="margin-bottom: 32px;">
+        <h1 id="projectTitle"></h1>
+        <div id="projectTags" class="tags" style="margin-top: 12px;"></div>
+      </div>
+
+      <!-- Image/Video Carousel -->
+      <div class="carousel-container" style="margin-bottom: 48px;">
+        <div class="carousel-wrapper">
+          <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Previous media">‹</button>
+          <div class="carousel-slide-container">
+            <div class="carousel-track" id="carouselTrack"></div>
+          </div>
+          <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Next media">›</button>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+      </div>
+
+      <!-- Project Description Section -->
+      <div class="project-description" style="max-width: 800px; margin: 0 auto;">
+        <h2 style="margin-bottom: 24px;">About This Project</h2>
+        <div id="projectDescription" class="description-content"></div>
+      </div>
+
+      <!-- Navigation to next/previous projects -->
+      <div class="project-navigation" style="margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <a id="prevProject" href="#" class="btn" style="display: none;">← Previous Project</a>
+        <a href="projects.html" class="btn">Back to All Projects</a>
+        <a id="nextProject" href="#" class="btn" style="display: none;">Next Project →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>© <span id="year"></span> Diego Solorzano. All rights reserved.</div>
+      <div style="display:flex; gap:12px">
+        <a href="projects.html">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html">Back to home ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="projects-data.js"></script>
+  <script src="project-detail.js"></script>
+</body>
+</html>
+
