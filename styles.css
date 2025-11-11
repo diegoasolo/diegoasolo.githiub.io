@@ -12,8 +12,33 @@ header { position: sticky; top: 0; backdrop-filter: blur(6px); border-bottom:1px
 nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; }
 .brand { font-weight: 700; letter-spacing: -0.02em; }
 .navlinks { display:flex; gap:18px; align-items:center; }
-.btn { display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--border); padding:10px 14px; border-radius:12px; }
-.btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--border);
+  padding:10px 14px;
+  border-radius:12px;
+  background: transparent;
+  border-color: var(--border);
+  box-shadow: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover { border-color: rgba(0,0,0,0.5); box-shadow: 0 0 12px rgba(0,0,0,0.18); }
+.dark .btn:hover { border-color: rgba(255,255,255,0.95); box-shadow: 0 0 12px rgba(255,255,255,0.35); }
+.btn.primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+  box-shadow: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn.primary:hover {
+  background: color-mix(in oklab, var(--accent) 85%, var(--bg) 15%);
+  border-color: rgba(0,0,0,0.6);
+  box-shadow: 0 0 14px rgba(0,0,0,0.22);
+}
+.dark .btn.primary:hover { border-color: rgba(255,255,255,1); box-shadow: 0 0 14px rgba(255,255,255,0.4); }
 .grid { display:grid; gap:24px; }
 .grid.cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
 @media (min-width: 900px){ .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -32,9 +57,9 @@ section { padding:56px 0; }
 .skill { border:1px solid var(--border); padding:10px 12px; border-radius:12px; font-size:14px; }
 footer { border-top:1px solid var(--border); padding:24px 0; font-size: 14px; }
 .toggle { border:1px solid var(--border); border-radius:12px; padding:8px 10px; background:#f1f1f3; cursor:pointer; transition: background 0.2s ease; }
-.dark .toggle { background:#3a3a40; }
+.dark .toggle { background:#d9d9e0; }
 .toggle:hover { background:#d6d6dd; }
-.dark .toggle:hover { background:#6a6a74; }
+.dark .toggle:hover { background:#f0f1f5; }
 .field { display:flex; flex-direction:column; gap:6px; }
 input, textarea { background: var(--bg); color: var(--text); border:1px solid var(--border); border-radius:12px; padding:10px 12px; }
 textarea { resize: vertical; }
