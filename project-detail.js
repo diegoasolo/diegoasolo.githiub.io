@@ -67,6 +67,8 @@ if (!project) {
       img.src = media.url;
       img.alt = media.alt || `Project image ${index + 1}`;
       img.loading = index === 0 ? 'eager' : 'lazy';
+      
+      
       slide.appendChild(img);
     } else if (media.type === 'video') {
       const video = document.createElement('video');
@@ -76,6 +78,8 @@ if (!project) {
       if (media.thumbnail) {
         video.poster = media.thumbnail;
       }
+      
+      
       slide.appendChild(video);
     }
     
@@ -151,7 +155,7 @@ if (!project) {
           currentIndex = 0;
         }
         updateCarousel();
-      }, 5000);
+      }, 4000);
     }
 
     function stopAutoPlay() {

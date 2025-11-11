@@ -1,7 +1,7 @@
 
 // ====== Quick personalization ======
 const LINKS = {
-  resume: 'Diego_Solorzano_Resume.pdf',
+  resume: 'CV_Diego_Solorzano (3).pdf',
   github: 'https://github.com/diegoasolo',
   linkedin: 'https://www.linkedin.com/in/diegoasolo/',
   email: 'diegoasolo12@gmail.com'
@@ -9,7 +9,7 @@ const LINKS = {
 
 // Projects data is loaded from projects-data.js
 
-const SKILLS = ['Photonics','FDTD/Lumerical','COMSOL','MATLAB','Python','PCB Design','Embedded (ESP32)','Signal Processing','Optics Lab','Robotics'];
+const SKILLS = ['Photonics','Table Top Optics','FDTD/Lumerical','COMSOL','PCB Design (Altium)','MATLAB','Python','C/C++','Embedded Systems','Raspberry Pi', 'Arduino', 'Oscilloscope'];
 
 // ====== Theme ======
 const themeToggle = document.getElementById('themeToggle');

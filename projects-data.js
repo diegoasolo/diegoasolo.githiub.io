@@ -13,11 +13,14 @@
 //    - thumbnail: main image for project card (usually first image)
 //    - description: detailed HTML description with your work/contributions
 // 3. Add images/videos to the media array:
-//    - For images: { type: 'image', url: 'path/to/image.jpg', alt: 'Description' }
-//    - For videos: { type: 'video', url: 'path/to/video.mp4', alt: 'Description', thumbnail: 'path/to/thumbnail.jpg' }
+//    - For images: { type: 'image', url: './Images/image.jpg', alt: 'Description' }
+//    - For videos: { type: 'video', url: './Images/video.mp4', alt: 'Description', thumbnail: './Images/thumbnail.jpg' }
+//    - NOTE: Use relative paths starting with './Images/' for files in the Images folder
+//    - NOTE: PDFs cannot be displayed in the carousel - convert to JPG/PNG images first
 // 4. Fill in the "What I Did" section in the description with your specific contributions
 //
 // TIP: You can add as many images/videos as you want - they will cycle automatically in a carousel
+// TIP: To use local images, place them in the Images/ folder and use: './Images/your-image.jpg'
 
 const PROJECTS = [
   {
@@ -26,27 +29,35 @@ const PROJECTS = [
     tags: ['Computational Optics', 'Neural Networks', 'Image Correction'],
     shortDescription: 'Computational imaging pipeline using phase modulation and PSF deconvolution; GPU-accelerated diffraction sims.',
     // Multiple images/videos that will cycle in carousel
+    // Use relative paths: './Images/filename.jpg' or './Images/filename.png'
+    // NOTE: PDFs don't work - convert to JPG/PNG images first, or add image files to Images folder
     media: [
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1520975922284-8f31b0d0b9b5?q=80&w=1200&auto=format&fit=crop',
-        alt: 'FogHacks project image 1'
+        url: './Images/foghacks.jpg', // Replace with your actual image file
+        alt: 'FogHacks Render'
+      },
+      // Add more images by uncommenting and updating these:
+      {
+        type: 'image',
+        url: './Images/foghacks_imageplane.png',
+        alt: 'FogHacks Scattering and unscattering'
       },
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop',
-        alt: 'FogHacks project image 2'
+        url: './Images/foghacks_SLM_to_DMD.png',
+        alt: 'FogHacks SLM to DMD Conversion using Lee Hologram Technique'
       }
-      // Add more images or videos here
+      // For videos:
       // {
       //   type: 'video',
-      //   url: 'path/to/video.mp4',
+      //   url: './Images/foghacks-video.mp4',
       //   alt: 'Project video',
-      //   thumbnail: 'path/to/thumbnail.jpg' // Optional thumbnail
+      //   thumbnail: './Images/foghacks-thumbnail.jpg' // Optional thumbnail
       // }
     ],
     // Thumbnail for project cards (first image or specific thumbnail)
-    thumbnail: 'https://images.unsplash.com/photo-1520975922284-8f31b0d0b9b5?q=80&w=1200&auto=format&fit=crop',
+    thumbnail: './Images/foghacks.jpg', // Replace with your actual image file
     // Description section - you can add your detailed description here
     description: `
     <h3>Overview</h3>
@@ -70,21 +81,26 @@ const PROJECTS = [
   {
     id: 'hbn-quantum',
     title: 'Quantum Emitters in hBN',
-    tags: ['Nanophotonics', 'hBN', 'FDTD'],
+    tags: ['Nanophotonics', 'material science', 'FDTD'],
     shortDescription: 'Gold nanorods + alumina spacer cavity to boost Purcell factor and control polarization for spin-defect readout.',
     media: [
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1554475901-4538ddfbccc2?q=80&w=1200&auto=format&fit=crop',
-        alt: 'hBN Quantum Emitters project image 1'
+        url: './Images/QUROP_POSTER_FINAL.png',
+        alt: 'PL spectroscopy set up'
       },
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1200&auto=format&fit=crop',
+        url: './Images/pl_data.png',
+        alt: 'hBN Quantum Emitters project image 2'
+      },
+      {
+        type: 'image',
+        url: './Images/gnr_data.png',
         alt: 'hBN Quantum Emitters project image 2'
       }
     ],
-    thumbnail: 'https://images.unsplash.com/photo-1554475901-4538ddfbccc2?q=80&w=1200&auto=format&fit=crop',
+    thumbnail: './Images/pl.jpg',
     description: `
     <h3>Overview</h3>
     <p>Gold nanorods + alumina spacer cavity to boost Purcell factor and control polarization for spin-defect readout.</p>
@@ -104,24 +120,36 @@ const PROJECTS = [
     <h3>Results</h3>
     <p><!-- Add results, metrics, or outcomes here --></p>`
   },
+
+
   {
     id: 'rushbot',
     title: 'RushBot — Autonomous Recruitment Rover',
-    tags: ['Robotics', 'SLAM', 'Embedded'],
+    tags: ['Robotics', 'SLAM', 'Embedded Systems', 'Power Electronics'],
     shortDescription: 'Interactive rover with SLAM navigation, manipulator arm, and on-device voice/chat interface for event engagement.',
     media: [
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
-        alt: 'RushBot project image 1'
+        url: './Images/rushbot_render.png',
+        alt: 'RushBot CAD Render'
       },
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop',
-        alt: 'RushBot project image 2'
+        url: './Images/rushbot_slam.png',
+        alt: 'RushBot Electrical Schematic'
+      },
+      {
+        type: 'image',
+        url: './Images/rushbot_battery.png',
+        alt: 'RushBot High Voltage Battery with integrated BMS'
+      },
+      {
+        type: 'image',
+        url: './Images/rushbot_present.png',
+        alt: 'RushBot Presentaion at a conference'
       }
     ],
-    thumbnail: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
+    thumbnail: './Images/rushbot_render.png',
     description: `
     <h3>Overview</h3>
     <p>Interactive rover with SLAM navigation, manipulator arm, and on-device voice/chat interface for event engagement.</p>
@@ -141,6 +169,8 @@ const PROJECTS = [
     <h3>Results</h3>
     <p><!-- Add results, metrics, or outcomes here --></p>`
   },
+
+
   {
     id: 'mag-lev-device',
     title: 'Electrodynamic Suspension (EDS) Mag-Lev System',
@@ -149,16 +179,16 @@ const PROJECTS = [
     media: [
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop',
+        url: './Images/maglev.jpg',
         alt: 'Magnetic levitation system'
       },
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200&auto=format&fit=crop',
-        alt: 'Halbach array configuration'
+        url: './Images/maglev_presentation.jpg',
+        alt: 'Mag-Lev Presentation at a conference'
       }
     ],
-    thumbnail: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop',
+    thumbnail: './Images/maglev.jpg',
     description: `
     <h3>Overview</h3>
     <p>Developed Electrodynamic Suspension (EDS) prototypes utilizing linear Halbach arrays of permanent magnets for magnetic levitation applications at HyperXite, UCI's high-speed transportation team.</p>
@@ -179,6 +209,8 @@ const PROJECTS = [
     <h3>Results</h3>
     <p>Achieved a 50% increase in lift-to-drag ratio through optimized magnet configurations. Successfully demonstrated magnetic levitation with a maximum height of 25 mm in the experimental prototype.</p>`
   },
+
+
   {
     id: 'control-pcb-board',
     title: '4-Layer Control Board PCB Design',
@@ -187,16 +219,16 @@ const PROJECTS = [
     media: [
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop',
+        url: './Images/control_board_schematic.png',
         alt: 'PCB design and layout'
       },
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop',
+        url: './Images/control_board.png',
         alt: 'Circuit board assembly'
       }
     ],
-    thumbnail: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop',
+    thumbnail: './Images/control_board_cover.png',
     description: `
     <h3>Overview</h3>
     <p>Designed and developed a comprehensive 4-layer control board PCB that interfaces multiple sensor systems and control components to an onboard Raspberry Pi for a high-speed transportation pod.</p>
@@ -219,10 +251,12 @@ const PROJECTS = [
     <h3>Results</h3>
     <p>Successfully designed and integrated a complete control system meeting all specifications for signal integrity, power distribution, and operational stability. The board interfaces multiple sensor types and control systems seamlessly with the onboard computing platform.</p>`
   },
+
+
   {
     id: 'quantum-error-correction',
     title: 'Quantum Error Correction Codes',
-    tags: ['Quantum Computing', 'Qiskit', 'IBM Quantum', 'Error Correction'],
+    tags: ['Quantum Computing', 'Qiskit', 'Error Correction'],
     shortDescription: 'Developed and implemented 9-qubit and 13-qubit Shor error-correcting codes on IBM Quantum hardware for multi-error detection and correction.',
     media: [
       {
@@ -240,6 +274,83 @@ const PROJECTS = [
     description: `
     <h3>Overview</h3>
     <p>Developed and implemented quantum error correction codes using Qiskit on IBM Quantum hardware, focusing on the Shor error-correcting code for detecting and correcting quantum errors.</p>
+    
+    <h3>What I Did</h3>
+    <p>Developed and implemented the 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, designing and optimizing quantum circuits to encode, decode, and correct arbitrary single-qubit errors. Extended the 9-qubit Shor error correction to a multi-error implementation using 13 qubits in Qiskit, enabling sequential detection and correction of bit-flip (X) and phase-flip (Z) errors within a single circuit.</p>
+    
+    <h3>Technologies & Tools</h3>
+    <ul>
+      <li>Qiskit (Quantum Computing Framework)</li>
+      <li>IBM Quantum Hardware</li>
+      <li>Shor Error Correction Code</li>
+      <li>Quantum Circuit Design</li>
+      <li>Quantum Error Correction Theory</li>
+      <li>Bit-flip (X) and Phase-flip (Z) Error Correction</li>
+    </ul>
+    
+    <h3>Results</h3>
+    <p>Successfully implemented both 9-qubit and 13-qubit Shor error correction codes, enabling detection and correction of arbitrary single-qubit errors and multi-error scenarios on real quantum hardware.</p>`
+  },
+  {
+    id: 'esp',
+    title: 'Emotional Support Pet (ESP)',
+    tags: ['ESP32', 'Computer Vision', 'Embedded Systems'],
+    shortDescription: 'Developed and implemented 9-qubit and 13-qubit Shor error-correcting codes on IBM Quantum hardware for multi-error detection and correction.',
+    media: [
+      {
+        type: 'image',
+        url: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200&auto=format&fit=crop',
+        alt: 'Quantum computing visualization'
+      },
+      {
+        type: 'image',
+        url: 'https://images.unsplash.com/photo-1639322537504-6427a16b0a6b?q=80&w=1200&auto=format&fit=crop',
+        alt: 'Quantum circuit diagram'
+      }
+    ],
+    thumbnail: './Images/esp_color.jpg',
+    description: `
+    <h3>Overview</h3>
+    <p>Developed and implemented quantum error correction codes using Qiskit on IBM Quantum hardware, focusing on the Shor error-correcting code for detecting and correcting quantum errors.</p>
+    
+    <h3>What I Did</h3>
+    <p>Developed and implemented the 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, designing and optimizing quantum circuits to encode, decode, and correct arbitrary single-qubit errors. Extended the 9-qubit Shor error correction to a multi-error implementation using 13 qubits in Qiskit, enabling sequential detection and correction of bit-flip (X) and phase-flip (Z) errors within a single circuit.</p>
+    
+    <h3>Technologies & Tools</h3>
+    <ul>
+      <li>Qiskit (Quantum Computing Framework)</li>
+      <li>IBM Quantum Hardware</li>
+      <li>Shor Error Correction Code</li>
+      <li>Quantum Circuit Design</li>
+      <li>Quantum Error Correction Theory</li>
+      <li>Bit-flip (X) and Phase-flip (Z) Error Correction</li>
+    </ul>
+    
+    <h3>Results</h3>
+    <p>Successfully implemented both 9-qubit and 13-qubit Shor error correction codes, enabling detection and correction of arbitrary single-qubit errors and multi-error scenarios on real quantum hardware.</p>`
+  },
+
+  {
+    id: 'guidance-glasses',
+    title: 'Guidance Glasses',
+    tags: ['Embedded Systems', 'Machine Learning', 'Arduino', 'Computer Vision'],
+    shortDescription: 'Developed and implemented 9-qubit and 13-qubit Shor error-correcting codes on IBM Quantum hardware for multi-error detection and correction.',
+    media: [
+      {
+        type: 'image',
+        url: './Images/guidanceglasses.png',
+        alt: 'Solidworks model of Guidance Glasses'
+      },
+      {
+        type: 'image',
+        url: './Images/guidanceglasses_electrical.png',
+        alt: 'Electrical schematic of Guidance Glasses'
+      }
+    ],
+    thumbnail: './Images/guidanceglasses.png',
+    description: `
+    <h3>Overview</h3>
+    <p>Co-developed a pair of glasses that can assist the visually impaired by providing information about their surroundings via haptic feedback.</p>
     
     <h3>What I Did</h3>
     <p>Developed and implemented the 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, designing and optimizing quantum circuits to encode, decode, and correct arbitrary single-qubit errors. Extended the 9-qubit Shor error correction to a multi-error implementation using 13 qubits in Qiskit, enabling sequential detection and correction of bit-flip (X) and phase-flip (Z) errors within a single circuit.</p>
