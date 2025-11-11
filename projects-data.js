@@ -27,7 +27,7 @@ const PROJECTS = [
     id: 'foghacks',
     title: 'FogHacks — Adaptive Imaging Through Fog',
     tags: ['Computational Optics', 'Neural Networks', 'Image Correction'],
-    shortDescription: 'Computational imaging pipeline using phase modulation and PSF deconvolution; GPU-accelerated diffraction sims.',
+    shortDescription: 'Using SLM hardware and computational optics to correct images through scattering media.',
     // Multiple images/videos that will cycle in carousel
     // Use relative paths: './Images/filename.jpg' or './Images/filename.png'
     // NOTE: PDFs don't work - convert to JPG/PNG images first, or add image files to Images folder
@@ -61,28 +61,31 @@ const PROJECTS = [
     // Description section - you can add your detailed description here
     description: `
     <h3>Overview</h3>
-    <p>Computational imaging pipeline using phase modulation and PSF deconvolution; GPU-accelerated diffraction simulations.</p>
+    <p>Turbid media such as fog results in constnalty changeing scattering patterns that will disort images. We use a Digital Micromirror Device (DMD) 
+    to correct for these effects by modulating the phase of the light passing through the scattering media. By training a neural network in combination with an image quality score assesment
+    our system will update the DMD pattern to undo the wavefront distortion caused by the scattering media. This is an ongoing group project as of my senior design project advised by Dr. Fei Xia.</p>
     
     <h3>What I Did</h3>
-    <p><!-- Add your detailed description here about what you've done in this project -->
-    Describe your specific contributions, methods, and achievements here.</p>
+    <p>Simultated ray propigation and complex random fog scattering patterns to train the neural network. Impletnented an algorithm to convert a target image to SLM Computer Generated Hologram (CGH), and then to a DMD pattern using the Lee Hologram Technique.
+    Deisgined and built the optical setup to test the system including a 4f system to image the DMD pattern, a camera to capture the image, and cohnerent light source.</p>
     
     <h3>Technologies & Tools</h3>
     <ul>
       <li>Computational Optics</li>
       <li>Neural Networks</li>
       <li>Image Correction</li>
-      <li>GPU Acceleration</li>
+      <li>Optical Design</li>
+      <li>SLM Hardware</li>
     </ul>
     
     <h3>Results</h3>
-    <p><!-- Add results, metrics, or outcomes here --></p>`
+    <p><i>Check back soon for results!</i></p>`
   },
   {
     id: 'hbn-quantum',
-    title: 'Quantum Emitters in hBN',
+    title: 'Quantum Emitter Enhancement in hexagonal Boron Nitride',
     tags: ['Nanophotonics', 'material science', 'FDTD'],
-    shortDescription: 'Gold nanorods + alumina spacer cavity to boost Purcell factor and control polarization for spin-defect readout.',
+    shortDescription: 'Enhanceing photoluminescence of defect centers in hexagonal boron nitride (hBN) using plasmonic nanostructures.',
     media: [
       {
         type: 'image',
@@ -103,22 +106,31 @@ const PROJECTS = [
     thumbnail: './Images/pl.jpg',
     description: `
     <h3>Overview</h3>
-    <p>Gold nanorods + alumina spacer cavity to boost Purcell factor and control polarization for spin-defect readout.</p>
+    <p>
+    Hexagonal boron nitride (hBN) is a promising material for quantum technolgies due to its unique properties. However, its low photoluminescence efficiency 
+    hinders its potential. I study how we can use plasmonic nanostructures such as gold nanorods or gold cavitiesto enhance the photoluminescence of defect centers in hBN. 
+    Currently I am working on this an an honors thesis advised by Dr. Maxim Shcherbakov.
+    </p>
     
     <h3>What I Did</h3>
-    <p><!-- Add your detailed description here about what you've done in this project -->
-    Describe your specific contributions, methods, and achievements here.</p>
+    <p>Simulated the enchancent from both gold coated meta cavities and gold nanorods (GNR) strucutres with hBN using FDTD simulations. Optimized device paramters such as GNR length and alumina spacer thickness to maximize the Purcell enhancement factor.
+    Deigned and built the optical setup for Photoluminescence (PL)spectroscopy to measure the photoluminescence of the hBN defect centers.
+    </p>
     
     <h3>Technologies & Tools</h3>
     <ul>
       <li>Nanophotonics</li>
-      <li>hBN (hexagonal Boron Nitride)</li>
+      <li>hexagonal Boron Nitride (hBN)</li>
       <li>FDTD Simulations</li>
       <li>Quantum Emitters</li>
+      <li>Photoluminescence spectroscopy</li>
+      <li>Optical Design</li>
     </ul>
     
     <h3>Results</h3>
-    <p><!-- Add results, metrics, or outcomes here --></p>`
+    <p>Gold meta cavities showed a 10x increase in photoluminescence efficiency while also resulting in significantly higher Q factors (see Image 1). 
+    I am currently working towards obtaining data from GNR enhancement, however I have successfully built andtested the optical setup, which can measure defect emission from hBN (see Image 2).
+    I have also simulated the enhancement and polairzation from GNRs in FDTD simulations (see Image 3).</p>`
   },
 
 
@@ -152,30 +164,40 @@ const PROJECTS = [
     thumbnail: './Images/rushbot_render.png',
     description: `
     <h3>Overview</h3>
-    <p>Interactive rover with SLAM navigation, manipulator arm, and on-device voice/chat interface for event engagement.</p>
+    <p>RushBot is a autonomous rover for our engineering organization that is designed to navigate through a campus environment and interact with students. 
+    It is equipped with a SLAM navigationsystem using a ROS2 framework, a manipulator arm tha can hand out flyers to students, 
+    and a on-device voice/chat interface designed to listen and repsond to questions about the organization. 
+    This team was made up of 17 students acorss differnet engineering disciplines in 3 primary subteams: hardware, software, and mechanical.
+    </p>
     
     <h3>What I Did</h3>
-    <p><!-- Add your detailed description here about what you've done in this project -->
-    Describe your specific contributions, methods, and achievements here.</p>
+    <p> As project manager for the RushBot team, I was responsible for managing the progress of each subteam and their deliverables, ensuring the project 
+    was on track to meet deadlines. I led both weekly subteam meetings and general team meetings to faciliate communication and cross team integration.
+    I was also in charge of securing funds for the project through reaching out to the school and organizations for sponsorships.
+    I also acted as primary hardware lead, leading the design of the low and high voltage systems, and designing the rovers custon 16V battery
+    </p>
     
     <h3>Technologies & Tools</h3>
     <ul>
       <li>Robotics</li>
       <li>SLAM (Simultaneous Localization and Mapping)</li>
       <li>Embedded Systems</li>
-      <li>Manipulator Arm Control</li>
+      <li>Power Electronics</li>
+      <li>Battery design</li>
     </ul>
     
     <h3>Results</h3>
-    <p><!-- Add results, metrics, or outcomes here --></p>`
+    <p>While we werent able to fully intergrate all aspects ov the rover together, indivual aspects such as the manipulator arm, chat bot, and high voltage system were fully completed
+    and demoned at the organizations regional confrence competiton (see Image 3), placing us at 1st place out of 6 teams. Our full design report can be viewed <a href="rushbot_report.pdf" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>!
+    </p>`
   },
 
 
   {
     id: 'mag-lev-device',
     title: 'Electrodynamic Suspension (EDS) Mag-Lev System',
-    tags: ['Magnetic Levitation', 'COMSOL', 'Electrodynamics', 'Hardware Design'],
-    shortDescription: 'Pioneered magnetic levitation sub-team and developed EDS prototypes using linear Halbach arrays, achieving 50% increase in lift-to-drag ratio.',
+    tags: ['Magnetic Levitation', 'COMSOL', 'Electrodynamics', 'Mechanical Design'],
+    shortDescription: 'A stable magnetic levitation system using neodymium magnets in a halbach array with levitaion forces generated by rotaional motion.',
     media: [
       {
         type: 'image',
@@ -184,38 +206,48 @@ const PROJECTS = [
       },
       {
         type: 'image',
-        url: './Images/maglev_presentation.jpg',
+        url: './Images/maglev_presentation.JPG',
         alt: 'Mag-Lev Presentation at a conference'
       }
     ],
     thumbnail: './Images/maglev.jpg',
     description: `
     <h3>Overview</h3>
-    <p>Developed Electrodynamic Suspension (EDS) prototypes utilizing linear Halbach arrays of permanent magnets for magnetic levitation applications at HyperXite, UCI's high-speed transportation team.</p>
+    <p>
+    Magnetic levitation is a desirable feature for high-speed transportation systems due to its ability to reduce drag and increase efficiency.
+    We developed an Electrodynamic suspension (EDS) system using neodymium magnets in a halbach array with levitaion forces generated by rotaional motion using Lenz's law.
+    Using a series of circular halbach arrays powered by high torqie DC motors, we are able to generate a levitaion force that is able to levitate the system at various speeds.
+    This was designed by a team of 3 people as part Hyperxite; a senoir design project focusced on creating a high-speed energy efficient transportation pod.
+    </p>
     
     <h3>What I Did</h3>
-    <p>Pioneered the formation of a magnetic levitation sub-team and initiated development of the first EDS prototypes. I conducted comprehensive COMSOL Multiphysics simulations to evaluate and optimize permanent magnet configurations, analyzing lift and drag forces to achieve a 50% increase in the lift-to-drag ratio. Designed and built an experimental test rig and scaled prototype to validate simulations with onboard distance sensors, achieving a maximum levitation height of 25 mm.</p>
+    <p>I pioneered the formation of a magnetic levitation sub-team and initiated development of an Electrodynamic suspension (EDS) system. 
+    I conducted comprehensive COMSOL Multiphysics simulations to evaluate and optimize permanent magnet configurations, analyzing lift and drag forces to maximize the lift-to-drag ratio. 
+    Designed and built an experimental test rig and scaled prototype to validate simulations with Tof sensors.  
+    This system will eventually be used in the HyperXite high-speed transportation pod.
+    </p>  
     
     <h3>Technologies & Tools</h3>
     <ul>
       <li>COMSOL Multiphysics (Finite Element Analysis)</li>
-      <li>Electrodynamic Suspension (EDS) Systems</li>
-      <li>Halbach Array Design</li>
+      <li>Electromagnetics</li>
       <li>Experimental Test Rig Design</li>
-      <li>Distance Sensors Integration</li>
-      <li>Magnetic Field Simulation</li>
+      <li>Pyhton scripting</li>
+      <li>Mechanical Design</li>
     </ul>
     
     <h3>Results</h3>
-    <p>Achieved a 50% increase in lift-to-drag ratio through optimized magnet configurations. Successfully demonstrated magnetic levitation with a maximum height of 25 mm in the experimental prototype.</p>`
+    <p>Achieved a 50% increase in lift-to-drag ratio through optimized magnet configurations. Successfully demonstrated magnetic levitation with a maximum height of 25 mm in the experimental prototype.
+    Presented and demoed our results at the Hyperloop Global Competition in Canada, obtaining the best leviation system award out of 8 teams (see Image 2).
+    </p>`
   },
 
 
   {
     id: 'control-pcb-board',
     title: '4-Layer Control Board PCB Design',
-    tags: ['PCB Design', 'Altium', 'LTspice', 'Hardware Integration', 'BMS'],
-    shortDescription: 'Designed a 4-layer control board PCB interfacing multiple sensors and systems, with comprehensive circuit simulation and power system integration.',
+    tags: ['PCB Design', 'Altium', 'LTspice', 'Hardware Integration'],
+    shortDescription: 'A 4-layer control board PCB interfacing multiple sensors and systems, with comprehensive circuit simulation and power system integration.',
     media: [
       {
         type: 'image',
@@ -231,25 +263,27 @@ const PROJECTS = [
     thumbnail: './Images/control_board_cover.png',
     description: `
     <h3>Overview</h3>
-    <p>Designed and developed a comprehensive 4-layer control board PCB that interfaces multiple sensor systems and control components to an onboard Raspberry Pi for a high-speed transportation pod.</p>
+    <p>
+    A control board is a crucial component of Hyperxite's transportation pod.
+    This control board is responsible for interfacing with the onboard Raspberry Pi to control the pod's systems such as the braking system, temperature sensors to monitor the Linear induction motor temperature, accelerometer to monitor the pod's acceleration, and pressure sensors to monitor the breaking pressure.
+    </p>
     
     <h3>What I Did</h3>
-    <p>Utilized Altium to design a 4-layer control board PCB that interfaces multiple temperature, pressure, and motion sensors, along with the pneumatic braking system, to the onboard Raspberry Pi. Leveraged LTspice to simulate and analyze idealized circuit designs, verifying signal integrity, power distribution, and operational stability to meet control board specifications. Integrated a complete low-voltage and high-voltage system consisting of a battery management system (BMS), control board, power converters, and batteries onto the pod.</p>
+    <p>Designed and developed the 4-layer control board PCB using Altium that interfaces; 8 thermistor temperature sesnors, current sensors, accerlerometer, and pressure sensors, 
+    to an onboard Raspberry Pi. LT spice simulations were used to verify the proper opperation of the temperature sensors. I picked compoenents, designed the layout, and created the schematic. 
+    </p>
     
     <h3>Technologies & Tools</h3>
     <ul>
       <li>Altium Designer (PCB Layout)</li>
       <li>LTspice (Circuit Simulation)</li>
       <li>4-Layer PCB Design</li>
-      <li>Battery Management System (BMS)</li>
-      <li>Raspberry Pi Integration</li>
-      <li>Sensor Interface Design</li>
-      <li>Power Distribution Systems</li>
+      <li>Compoenent selection and integration</li>
       <li>Signal Integrity Analysis</li>
     </ul>
     
     <h3>Results</h3>
-    <p>Successfully designed and integrated a complete control system meeting all specifications for signal integrity, power distribution, and operational stability. The board interfaces multiple sensor types and control systems seamlessly with the onboard computing platform.</p>`
+    <p>Successfully designed and integrated a complete control system meeting all specifications for signal integrity, power distribution, and operational stability. The board interfaces multiple sensor types and control systems seamlessly with the onboard Raspberry Pi.</p>`
   },
 
 
@@ -261,80 +295,94 @@ const PROJECTS = [
     media: [
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200&auto=format&fit=crop',
+        url: './Images/error_correction.png',
         alt: 'Quantum computing visualization'
       },
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1639322537504-6427a16b0a6b?q=80&w=1200&auto=format&fit=crop',
+        url: './Images/error_correction_result.png',
         alt: 'Quantum circuit diagram'
       }
     ],
-    thumbnail: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200&auto=format&fit=crop',
+    thumbnail: './Images/error_correction.png',
     description: `
     <h3>Overview</h3>
-    <p>Developed and implemented quantum error correction codes using Qiskit on IBM Quantum hardware, focusing on the Shor error-correcting code for detecting and correcting quantum errors.</p>
+    <p> Quantum error correction is a crucial technique for ensuring the reliability of quantum computers. It allows for the detection and correction of errors that occur during quantum computation.
+    This project was a group project for a graudate class in Quantum Computing at UCI. We implemented a quantum error correction code using Qiskit on IBM Quantum hardware.
+    We were able to successfully design and implement a 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, and extend it to a multi-error implementation using 13 qubits.
+    </p>
     
     <h3>What I Did</h3>
-    <p>Developed and implemented the 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, designing and optimizing quantum circuits to encode, decode, and correct arbitrary single-qubit errors. Extended the 9-qubit Shor error correction to a multi-error implementation using 13 qubits in Qiskit, enabling sequential detection and correction of bit-flip (X) and phase-flip (Z) errors within a single circuit.</p>
+    <p>Developed and implemented the 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, designing and optimizing quantum circuits to encode, decode, and correct arbitrary single-qubit errors. 
+    Extended the 9-qubit Shor error correction to a multi-error implementation using 13 qubits in Qiskit, enabling sequential detection and correction of bit-flip (X) and phase-flip (Z) errors within a single circuit.</p>
     
     <h3>Technologies & Tools</h3>
     <ul>
       <li>Qiskit (Quantum Computing Framework)</li>
-      <li>IBM Quantum Hardware</li>
+      <li>Quantum computing</li>
       <li>Shor Error Correction Code</li>
       <li>Quantum Circuit Design</li>
-      <li>Quantum Error Correction Theory</li>
-      <li>Bit-flip (X) and Phase-flip (Z) Error Correction</li>
     </ul>
     
     <h3>Results</h3>
-    <p>Successfully implemented both 9-qubit and 13-qubit Shor error correction codes, enabling detection and correction of arbitrary single-qubit errors and multi-error scenarios on real quantum hardware.</p>`
+    <p>Successfully implemented both 9-qubit and 13-qubit Shor error correction codes, showing successful error correction of arbitrary single-qubit errors.
+    We presented our results as part of our final for the class, recieivng a 100% on the project.
+    </p>`
   },
   {
     id: 'esp',
     title: 'Emotional Support Pet (ESP)',
     tags: ['ESP32', 'Computer Vision', 'Embedded Systems'],
-    shortDescription: 'Developed and implemented 9-qubit and 13-qubit Shor error-correcting codes on IBM Quantum hardware for multi-error detection and correction.',
+    shortDescription: 'A fun robotic pet lamp capabale of different emotions and interactions with the user based on their prefrence.',
     media: [
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200&auto=format&fit=crop',
-        alt: 'Quantum computing visualization'
+        url: './Images/esp_color.jpg',
+        alt: 'ESP showing different emotions'
       },
       {
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1639322537504-6427a16b0a6b?q=80&w=1200&auto=format&fit=crop',
-        alt: 'Quantum circuit diagram'
+        url: './Images/esp_tracking.jpg',
+        alt: 'ESP Tracking System'
+      },
+      {
+        type: 'image',
+        url: './Images/esp_team.JPG',
+        alt: 'ESP Team'
       }
     ],
     thumbnail: './Images/esp_color.jpg',
     description: `
     <h3>Overview</h3>
-    <p>Developed and implemented quantum error correction codes using Qiskit on IBM Quantum hardware, focusing on the Shor error-correcting code for detecting and correcting quantum errors.</p>
+    <p> ESP or Emotional Support Pet is a fun robotic pet lamp capabale of different emotions through different LED colors and motion patterns 
+    and interactions with the user based on the lamps selected mood. This was a team project as part of IEEE's first annual emmbeded systems hackathon, thus this 
+    project was compelted over the course of 48 hours. It features 4 unique moods: happy, sad, angry, and lazy, and has a camera for motion tracking to interact with the user.
+    </p>
     
     <h3>What I Did</h3>
-    <p>Developed and implemented the 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, designing and optimizing quantum circuits to encode, decode, and correct arbitrary single-qubit errors. Extended the 9-qubit Shor error correction to a multi-error implementation using 13 qubits in Qiskit, enabling sequential detection and correction of bit-flip (X) and phase-flip (Z) errors within a single circuit.</p>
+    <p> I was responsible for intergration the remote LED lamp control via python using an API, as well as creating the diferent moods and motion and LEDpatterns for the lamp.
+    I also assisted with other sensor intergration such as the load cell sensor to repsond to the user's touch and servo motor to move the lamp's head.
+    </p>
     
     <h3>Technologies & Tools</h3>
     <ul>
-      <li>Qiskit (Quantum Computing Framework)</li>
-      <li>IBM Quantum Hardware</li>
-      <li>Shor Error Correction Code</li>
-      <li>Quantum Circuit Design</li>
-      <li>Quantum Error Correction Theory</li>
-      <li>Bit-flip (X) and Phase-flip (Z) Error Correction</li>
+      <li>Python</li>
+      <li>API Integration</li>
+      <li>LED Control</li>
+      <li>Embedded Systems</li>
+      <li>Computer Vision</li>
     </ul>
     
     <h3>Results</h3>
-    <p>Successfully implemented both 9-qubit and 13-qubit Shor error correction codes, enabling detection and correction of arbitrary single-qubit errors and multi-error scenarios on real quantum hardware.</p>`
+    <p>After 48 hours our team succesfully demoed the ESP to the judges and attendees and completed all major aspects of the projects. 
+    </p>`
   },
 
   {
     id: 'guidance-glasses',
     title: 'Guidance Glasses',
     tags: ['Embedded Systems', 'Machine Learning', 'Arduino', 'Computer Vision'],
-    shortDescription: 'Developed and implemented 9-qubit and 13-qubit Shor error-correcting codes on IBM Quantum hardware for multi-error detection and correction.',
+    shortDescription: 'A pair of glasses that can assist the visually impaired to navigate urban enviroments by providing information about their surroundings via haptic feedback.',
     media: [
       {
         type: 'image',
@@ -350,23 +398,26 @@ const PROJECTS = [
     thumbnail: './Images/guidanceglasses.png',
     description: `
     <h3>Overview</h3>
-    <p>Co-developed a pair of glasses that can assist the visually impaired by providing information about their surroundings via haptic feedback.</p>
+    <p>Current navigation systems for the visually impaired are either costly or unreliable. I worked in a team of 6 students to design and build a pair of glasses that can assist the visually impaired to navigate urban enviroments by providing information about their surroundings via haptic feedback.
+    The glasses feature an ultrasonic sensor to detect obstacles and how far away they are, as well as a camera to detect pedestrian stops and crosswalks.
+    The information captured by these sensors is this converted into haptic feedback intensity located on the temples of the glasses.
+    </p>
     
     <h3>What I Did</h3>
-    <p>Developed and implemented the 9-qubit Shor error-correcting code using Qiskit on IBM Quantum hardware, designing and optimizing quantum circuits to encode, decode, and correct arbitrary single-qubit errors. Extended the 9-qubit Shor error correction to a multi-error implementation using 13 qubits in Qiskit, enabling sequential detection and correction of bit-flip (X) and phase-flip (Z) errors within a single circuit.</p>
+    <p>I was responsible for the electrical design of the glasses, including the ultrasonic sensor to detect obstacles and the haptic feedback system 
+    which converetd object distances into haptic feedback intensity. I also helped with the CAD design of the glasses which housed the ultrasonic sensor, camera and the haptic feedback system.
+    </p>
     
     <h3>Technologies & Tools</h3>
     <ul>
-      <li>Qiskit (Quantum Computing Framework)</li>
-      <li>IBM Quantum Hardware</li>
-      <li>Shor Error Correction Code</li>
-      <li>Quantum Circuit Design</li>
-      <li>Quantum Error Correction Theory</li>
-      <li>Bit-flip (X) and Phase-flip (Z) Error Correction</li>
+      <li>Embedded Systems</li>
+      <li>Computer Vision</li>
+      <li>Haptic Feedback</li>
+      <li>Machine Learning</li>
     </ul>
     
     <h3>Results</h3>
-    <p>Successfully implemented both 9-qubit and 13-qubit Shor error correction codes, enabling detection and correction of arbitrary single-qubit errors and multi-error scenarios on real quantum hardware.</p>`
+    <p>I succesfully designed the glasses component housing and implemented a working system that reliably converts object distances into haptic feedback intensity.</p>`
   }
 ];
 
