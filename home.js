@@ -1,7 +1,7 @@
 
 // ====== Quick personalization ======
 const LINKS = {
-  resume: 'CV_Diego_Solorzano (3).pdf',
+  resume: 'CV_diego_solorzano.pdf',
   github: 'https://github.com/diegoasolo',
   linkedin: 'https://www.linkedin.com/in/diegoasolo/',
   email: 'diegoasolo12@gmail.com'
