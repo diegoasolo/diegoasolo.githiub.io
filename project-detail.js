@@ -1,6 +1,6 @@
 //links
 const LINKS = {
-  resume: 'Diego_Solorzano_Resume.pdf',
+  resume: './Images/CV_diego_solorzano.pdf',
   github: 'https://github.com/diegoasolo',
   linkedin: 'https://www.linkedin.com/in/diegoasolo/',
   email: 'diegoasolo12@gmail.com'
