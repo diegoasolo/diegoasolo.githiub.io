@@ -1,4 +1,4 @@
-// ====== Quick personalization ======
+//links
 const LINKS = {
   resume: 'Diego_Solorzano_Resume.pdf',
   github: 'https://github.com/diegoasolo',
@@ -6,7 +6,7 @@ const LINKS = {
   email: 'diegoasolo12@gmail.com'
 };
 
-// ====== Theme ======
+// toggle theme
 const themeToggle = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 const savedTheme = localStorage.getItem('theme');
@@ -16,22 +16,22 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 });
 
-// ====== Links & year ======
+// links and year
 document.getElementById('resumeLink').href = LINKS.resume;
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ====== Get project ID from URL ======
+// get project ID from URL
 const urlParams = new URLSearchParams(window.location.search);
 const projectId = urlParams.get('id');
 
-// ====== Find project ======
+// find project
 const project = PROJECTS.find(p => p.id === projectId);
 
 if (!project) {
-  // If project not found, redirect to projects page
+  // if project not found, redirect to projects page
   window.location.href = 'projects.html';
 } else {
-  // ====== Render project header ======
+  // render project header
   document.getElementById('projectTitle').textContent = project.title;
   document.title = `${project.title} — Diego Solorzano`;
   
@@ -43,10 +43,10 @@ if (!project) {
     tagsContainer.appendChild(tagEl);
   });
 
-  // ====== Render project description ======
+  // render project description
   document.getElementById('projectDescription').innerHTML = project.description;
 
-  // ====== Carousel functionality ======
+  // carousel functionality
   const carouselTrack = document.getElementById('carouselTrack');
   const carouselIndicators = document.getElementById('carouselIndicators');
   const prevBtn = document.getElementById('carouselPrev');
@@ -55,7 +55,7 @@ if (!project) {
   let currentIndex = 0;
   const mediaItems = project.media || [];
 
-  // Render media items
+  // render media items
   mediaItems.forEach((media, index) => {
     // Create slide
     const slide = document.createElement('div');
@@ -94,22 +94,22 @@ if (!project) {
     carouselIndicators.appendChild(indicator);
   });
 
-  // Update carousel position
+  // update carousel position
   function updateCarousel() {
     const slideWidth = 100; // Percentage
     carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
     
-    // Update indicators
+    // update indicators
     document.querySelectorAll('.carousel-indicator').forEach((ind, idx) => {
       ind.classList.toggle('active', idx === currentIndex);
     });
 
-    // Update button states
+    // update button states
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === mediaItems.length - 1;
   }
 
-  // Navigate to specific slide
+  // navigate to specific slide
   function goToSlide(index) {
     if (index >= 0 && index < mediaItems.length) {
       currentIndex = index;
@@ -117,7 +117,7 @@ if (!project) {
     }
   }
 
-  // Previous/Next buttons
+  // previous/next buttons
   prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
       currentIndex--;
@@ -132,7 +132,7 @@ if (!project) {
     }
   });
 
-  // Keyboard navigation
+  // keyboard navigation
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' && currentIndex > 0) {
       currentIndex--;
@@ -143,7 +143,7 @@ if (!project) {
     }
   });
 
-  // Auto-play carousel (optional - cycles every 5 seconds)
+  // auto-play carousel 4 seconds
   // Only enable if there are multiple items
   if (mediaItems.length > 1) {
     let autoPlayInterval;

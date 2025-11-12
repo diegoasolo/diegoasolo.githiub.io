@@ -84,12 +84,17 @@ const PROJECTS = [
   {
     id: 'hbn-quantum',
     title: 'Quantum Emitter Enhancement in hexagonal Boron Nitride',
-    tags: ['Nanophotonics', 'material science', 'FDTD'],
+    tags: ['Nanophotonics', 'Material Science', 'FDTD', 'Plasmonics'],
     shortDescription: 'Enhanceing photoluminescence of defect centers in hexagonal boron nitride (hBN) using plasmonic nanostructures.',
     media: [
       {
         type: 'image',
-        url: './Images/QUROP_POSTER_FINAL.png',
+        url: './Images/QUROP_POSTER_FINAL.jpg',
+        alt: 'PL spectroscopy set up'
+      },
+      {
+        type: 'image',
+        url: './Images/pl.jpg',
         alt: 'PL spectroscopy set up'
       },
       {
@@ -109,7 +114,9 @@ const PROJECTS = [
     <p>
     Hexagonal boron nitride (hBN) is a promising material for quantum technolgies due to its unique properties. However, its low photoluminescence efficiency 
     hinders its potential. I study how we can use plasmonic nanostructures such as gold nanorods or gold cavitiesto enhance the photoluminescence of defect centers in hBN. 
-    Currently I am working on this an an honors thesis advised by Dr. Maxim Shcherbakov.
+    Currently I am working on this an an independent honors thesis project advised by Dr. Maxim Shcherbakov.
+    <br> <br>
+    The Poster (Image 1) from the 2024 UROP symposium presentation can be viewed <a href="./Images/QUROP_POSTER_FINAL.png" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>!
     </p>
     
     <h3>What I Did</h3>
@@ -130,7 +137,10 @@ const PROJECTS = [
     <h3>Results</h3>
     <p>Gold meta cavities showed a 10x increase in photoluminescence efficiency while also resulting in significantly higher Q factors (see Image 1). 
     I am currently working towards obtaining data from GNR enhancement, however I have successfully built andtested the optical setup, which can measure defect emission from hBN (see Image 2).
-    I have also simulated the enhancement and polairzation from GNRs in FDTD simulations (see Image 3).</p>`
+    I have also simulated the enhancement and polairzation from GNRs in FDTD simulations (see Image 3).
+    <br> <br>
+    I have recieved funding as a Quantum UROP fellow by the Eddleman Quantum Institute at UCI. click <a href="https://eqi.uci.edu/2024/09/10/the-eddleman-quantum-institute-eqi-has-awarded-9-graduate-research-fellowships-grf-for-2024-2025/" style="text-decoration: underline;" target="_blank" rel="noopener">here</a> to learn more!
+    </p>`
   },
 
 
@@ -168,13 +178,15 @@ const PROJECTS = [
     It is equipped with a SLAM navigationsystem using a ROS2 framework, a manipulator arm tha can hand out flyers to students, 
     and a on-device voice/chat interface designed to listen and repsond to questions about the organization. 
     This team was made up of 17 students acorss differnet engineering disciplines in 3 primary subteams: hardware, software, and mechanical.
+    <br> <br>
+    Our full design report can be viewed <a href="rushbot_report.pdf" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>!
     </p>
     
     <h3>What I Did</h3>
     <p> As project manager for the RushBot team, I was responsible for managing the progress of each subteam and their deliverables, ensuring the project 
     was on track to meet deadlines. I led both weekly subteam meetings and general team meetings to faciliate communication and cross team integration.
     I was also in charge of securing funds for the project through reaching out to the school and organizations for sponsorships.
-    I also acted as primary hardware lead, leading the design of the low and high voltage systems, and designing the rovers custon 16V battery
+    I also acted as primary hardware lead, leading the design of the low and high voltage systems, and designing the rover's custom 16V battery
     </p>
     
     <h3>Technologies & Tools</h3>
@@ -187,8 +199,12 @@ const PROJECTS = [
     </ul>
     
     <h3>Results</h3>
-    <p>While we werent able to fully intergrate all aspects ov the rover together, indivual aspects such as the manipulator arm, chat bot, and high voltage system were fully completed
-    and demoned at the organizations regional confrence competiton (see Image 3), placing us at 1st place out of 6 teams. Our full design report can be viewed <a href="rushbot_report.pdf" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>!
+    <p>While we werent able to fully intergrate all aspects of the rover together, indivual aspects such as the manipulator arm, chat bot, and high voltage system were fully completed, tested,
+    and demoned at the organizations regional confrence competiton (see Image 3), placing us at 1st place out of 6 teams. 
+    <br> <br>
+    Click here  <a href="https://www.linkedin.com/posts/ucithetatau_we-won-on-march-1st-the-pi-delta-activity-7312927741702467584-MC0Z?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADYiQEYBNCqqA2ofZpkoUAEDUo2FMq19KVg" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>
+    to see the LinkedIn post!
+    <br> <br>
     </p>`
   },
 
@@ -218,6 +234,8 @@ const PROJECTS = [
     We developed an Electrodynamic suspension (EDS) system using neodymium magnets in a halbach array with levitaion forces generated by rotaional motion using Lenz's law.
     Using a series of circular halbach arrays powered by high torqie DC motors, we are able to generate a levitaion force that is able to levitate the system at various speeds.
     This was designed by a team of 3 people as part Hyperxite; a senoir design project focusced on creating a high-speed energy efficient transportation pod.
+    <br> <br>
+    Click <a href="https://engineering.uci.edu/news/2025/8/uci-s-hyperxite-wins-three-awards-hyperloop-global-conference" style="text-decoration: underline;" target="_blank" rel="noopener">here</a> to see the our success at the Hyperloop Global Competition featured in a UCI engineering newsletter!
     </p>
     
     <h3>What I Did</h3>
@@ -237,8 +255,8 @@ const PROJECTS = [
     </ul>
     
     <h3>Results</h3>
-    <p>Achieved a 50% increase in lift-to-drag ratio through optimized magnet configurations. Successfully demonstrated magnetic levitation with a maximum height of 25 mm in the experimental prototype.
-    Presented and demoed our results at the Hyperloop Global Competition in Canada, obtaining the best leviation system award out of 8 teams (see Image 2).
+    <p>Achieved a 50% increase in lift-to-drag ratio through optimized magnet configurations. Successfully demonstrated magnetic levitation with a maximum height of 25 mm and a lift force of 100N per array.
+    I presented and demoed our results at the Hyperloop Global Competition in Canada, obtaining the best leviation system award out of 8 teams (see Image 2).
     </p>`
   },
 

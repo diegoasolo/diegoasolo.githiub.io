@@ -1,5 +1,5 @@
 
-// ====== Quick personalization ======
+//links
 const LINKS = {
   resume: 'CV_diego_solorzano.pdf',
   github: 'https://github.com/diegoasolo',
@@ -11,7 +11,7 @@ const LINKS = {
 
 const SKILLS = ['Photonics','Table Top Optics','FDTD/Lumerical','COMSOL','PCB Design (Altium)','MATLAB','Python','C/C++','Embedded Systems','Raspberry Pi', 'Arduino', 'Oscilloscope'];
 
-// ====== Theme ======
+// toggle theme
 const themeToggle = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 const savedTheme = localStorage.getItem('theme');
@@ -21,7 +21,7 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 });
 
-// ====== Links & year ======
+// links and year
 document.getElementById('resumeLink').href = LINKS.resume;
 document.getElementById('githubLink').href = LINKS.github;
 document.getElementById('linkedinLink').href = LINKS.linkedin;
@@ -29,10 +29,10 @@ document.getElementById('emailLink').href = `mailto:${LINKS.email}`;
 document.getElementById('mailtoDirect').href = `mailto:${LINKS.email}`;
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ====== Projects render ======
+// projects render
 const grid = document.getElementById('projectGrid');
 if (grid) {
-  // Show only first 3 projects on home page, or all if less than 3
+  // Show only first 3 projects on home page
   const projectsToShow = PROJECTS.slice(0, 3);
   function projCard(p){
     const el = document.createElement('article');
@@ -51,7 +51,7 @@ if (grid) {
   projectsToShow.forEach(p => grid.appendChild(projCard(p)));
 }
 
-// ====== Skills render ======
+// skills render
 const skillsEl = document.getElementById('skills');
 SKILLS.forEach(s => {
   const li = document.createElement('div');
@@ -60,7 +60,7 @@ SKILLS.forEach(s => {
   skillsEl.appendChild(li);
 });
 
-// ====== Contact handling ======
+// contact handling
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -71,7 +71,7 @@ form.addEventListener('submit', (e) => {
   window.location.href = `mailto:${LINKS.email}?subject=${subject}&body=${body}`;
 });
 
-// ====== Smooth scroll (no frameworks) ======
+// smooth scroll (no frameworks)
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', (e) => {
     const id = a.getAttribute('href').slice(1);
