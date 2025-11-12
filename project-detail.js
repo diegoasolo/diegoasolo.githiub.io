@@ -74,11 +74,17 @@ if (!project) {
       const video = document.createElement('video');
       video.src = media.url;
       video.controls = true;
+      video.muted = true; // Required for autoplay to work in most browsers
+      video.playsInline = true; // Ensures autoplay works on mobile devices
+      video.loop = true; // Loop the video
       video.preload = index === 0 ? 'auto' : 'metadata';
       if (media.thumbnail) {
         video.poster = media.thumbnail;
       }
-      
+      // Only autoplay the first video if it's the first slide
+      if (index === 0) {
+        video.autoplay = true;
+      }
       
       slide.appendChild(video);
     }
@@ -107,6 +113,25 @@ if (!project) {
     // update button states
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === mediaItems.length - 1;
+    
+    // Handle video play/pause
+    const slides = document.querySelectorAll('.carousel-slide');
+    slides.forEach((slide, idx) => {
+      const video = slide.querySelector('video');
+      if (video) {
+        if (idx === currentIndex) {
+          // Play video on current slide
+          video.play().catch(e => {
+            // Autoplay may be blocked, but that's okay
+            console.log('Video autoplay blocked:', e);
+          });
+        } else {
+          // Pause videos on other slides
+          video.pause();
+          video.currentTime = 0; // Reset to beginning
+        }
+      }
+    });
   }
 
   // navigate to specific slide

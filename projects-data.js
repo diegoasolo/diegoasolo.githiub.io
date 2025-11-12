@@ -221,6 +221,11 @@ const PROJECTS = [
         alt: 'Magnetic levitation system'
       },
       {
+        type: 'video',
+        url: './Images/maglev_video.mp4',
+        alt: 'Magnetic levitation system setup'
+      },
+      {
         type: 'image',
         url: './Images/maglev_presentation.JPG',
         alt: 'Mag-Lev Presentation at a conference'
@@ -256,7 +261,7 @@ const PROJECTS = [
     
     <h3>Results</h3>
     <p>Achieved a 50% increase in lift-to-drag ratio through optimized magnet configurations. Successfully demonstrated magnetic levitation with a maximum height of 25 mm and a lift force of 100N per array.
-    I presented and demoed our results at the Hyperloop Global Competition in Canada, obtaining the best leviation system award out of 8 teams (see Image 2).
+    I presented and demoed our results at the Hyperloop Global Competition in Canada, obtaining the best leviation system award out of 8 teams (see Image 3).
     </p>`
   },
 
@@ -362,6 +367,11 @@ const PROJECTS = [
         type: 'image',
         url: './Images/esp_tracking.jpg',
         alt: 'ESP Tracking System'
+      },
+      {
+        type: 'video',
+        url: './Images/esp_video.mp4',
+        alt: 'ESP Video'
       },
       {
         type: 'image',
