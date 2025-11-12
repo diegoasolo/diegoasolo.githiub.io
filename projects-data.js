@@ -1,26 +1,4 @@
-// ====== Projects Data ======
-// This file contains all project information
-// Each project can have multiple images and videos that will cycle in a carousel
-//
-// HOW TO ADD A NEW PROJECT:
-// 1. Copy one of the existing project objects below
-// 2. Update the following fields:
-//    - id: unique identifier (lowercase, no spaces, e.g., 'my-project')
-//    - title: project title
-//    - tags: array of technology/topic tags
-//    - shortDescription: brief description for project cards
-//    - media: array of images/videos (see examples below)
-//    - thumbnail: main image for project card (usually first image)
-//    - description: detailed HTML description with your work/contributions
-// 3. Add images/videos to the media array:
-//    - For images: { type: 'image', url: './Images/image.jpg', alt: 'Description' }
-//    - For videos: { type: 'video', url: './Images/video.mp4', alt: 'Description', thumbnail: './Images/thumbnail.jpg' }
-//    - NOTE: Use relative paths starting with './Images/' for files in the Images folder
-//    - NOTE: PDFs cannot be displayed in the carousel - convert to JPG/PNG images first
-// 4. Fill in the "What I Did" section in the description with your specific contributions
-//
-// TIP: You can add as many images/videos as you want - they will cycle automatically in a carousel
-// TIP: To use local images, place them in the Images/ folder and use: './Images/your-image.jpg'
+// Project Data
 
 const PROJECTS = [
   {
