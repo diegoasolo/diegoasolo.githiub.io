@@ -227,8 +227,18 @@ const PROJECTS = [
       },
       {
         type: 'image',
+        url: './Images/maglev_sim.gif',
+        alt: 'Magnetic levitation system simulation'
+      },
+      {
+        type: 'image',
+        url: './Images/maglev_data.png',
+        alt: 'Magnetic levitation system data'
+      },
+      {
+        type: 'image',
         url: './Images/maglev_presentation.JPG',
-        alt: 'Mag-Lev Presentation at a conference'
+        alt: 'Presentation at a conference'
       }
     ],
     thumbnail: './Images/maglev.jpg',
