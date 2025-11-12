@@ -116,7 +116,7 @@ const PROJECTS = [
     hinders its potential. I study how we can use plasmonic nanostructures such as gold nanorods or gold cavitiesto enhance the photoluminescence of defect centers in hBN. 
     Currently I am working on this an an independent honors thesis project advised by Dr. Maxim Shcherbakov.
     <br> <br>
-    The Poster (Image 1) from the 2024 UROP symposium presentation can be viewed <a href="./Images/QUROP_POSTER_FINAL.png" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>!
+    The Poster (Image 1) from the 2025 UROP symposium presentation can be viewed <a href="./Images/QUROP_POSTER_FINAL.png" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>!
     </p>
     
     <h3>What I Did</h3>
