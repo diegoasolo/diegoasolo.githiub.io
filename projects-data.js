@@ -269,6 +269,11 @@ const PROJECTS = [
         type: 'image',
         url: './Images/control_board.png',
         alt: 'Circuit board assembly'
+      },
+      {
+        type: 'image',
+        url: './Images/control_board_irl.png',
+        alt: 'Circuit board in real life'
       }
     ],
     thumbnail: './Images/control_board_cover.png',
@@ -409,6 +414,11 @@ const PROJECTS = [
         type: 'image',
         url: './Images/guidanceglasses_electrical.png',
         alt: 'Electrical schematic of Guidance Glasses'
+      },
+      {
+        type: 'image',
+        url: './Images/guidanceglasses_ultrasonic.png',
+        alt: 'Built Guidance Glasses with Ultrasonic Sensor'
       }
     ],
     thumbnail: './Images/guidanceglasses.png',
