@@ -9,7 +9,7 @@ const LINKS = {
 
 // Projects data is loaded from projects-data.js
 
-const SKILLS = ['Photonics','Table Top Optics','FDTD/Lumerical','COMSOL','PCB Design (Altium)','MATLAB','Python','C/C++','Embedded Systems','Raspberry Pi', 'Arduino', 'Oscilloscope'];
+const SKILLS = ['Table Top Optics','FDTD/Lumerical','COMSOL','PCB Design (Altium)','MATLAB','Python','C/C++','Embedded Systems','Raspberry Pi', 'Arduino', 'Oscilloscope'];
 
 // toggle theme
 const themeToggle = document.getElementById('themeToggle');
