@@ -2,65 +2,88 @@
 
 const PROJECTS = [
   {
-    id: 'foghacks',
-    title: 'FogHacks — Adaptive Imaging Through Fog',
-    tags: ['Computational Optics', 'Neural Networks', 'Image Correction', 'Python'],
-    shortDescription: 'Using SLM hardware and computational optics to correct images through scattering media.',
+    id: 'holophase',
+    title: 'HoloPhase — Adaptive Imaging Through Fog',
+    tags: ['Computational Optics', 'Neural Networks', 'Tensor Flow', 'Python'],
+    shortDescription: 'Using SLM hardware and deep learning to correct images through scattering media.',
     // Multiple images/videos that will cycle in carousel
     // Use relative paths: './Images/filename.jpg' or './Images/filename.png'
     // NOTE: PDFs don't work - convert to JPG/PNG images first, or add image files to Images folder
     media: [
       {
         type: 'image',
-        url: './Images/foghacks.jpg', // Replace with your actual image file
-        alt: 'FogHacks Render'
+        url: './Images/HoloPhase_pipeline.png', // Replace with your actual image file
+        alt: 'HoloPhase Render'
       },
       // Add more images by uncommenting and updating these:
       {
         type: 'image',
-        url: './Images/foghacks_imageplane.png',
-        alt: 'FogHacks Scattering and unscattering'
+        url: './Images/HoloPhase_optical.png',
+        alt: 'HoloPhase Optical Setup diagram and physical setup'
       },
       {
         type: 'image',
-        url: './Images/foghacks_SLM_to_DMD.png',
-        alt: 'FogHacks SLM to DMD Conversion using Lee Hologram Technique'
+        url: './Images/HoloPhase_DMD.png',
+        alt: 'HoloPhase SLM to DMD Conversion using Lee Hologram Technique'
+      },
+      {
+        type: 'image',
+        url: './Images/HoloPhase_optimize.png',
+        alt: 'Tensor Flow Optimization of Hologram Pattern'
+      },
+      {
+        type: 'image',
+        url: './Images/HoloPhase_test_digits.png',
+        alt: 'Evaluation of learned delta mask on new patterns'
+      },
+      {
+        type: 'image',
+        url: './Images/HoloPhase_scattering_delta_mask.png',
+        alt: 'Scattering mask and learned delta mask'
       }
       // For videos:
       // {
       //   type: 'video',
-      //   url: './Images/foghacks-video.mp4',
+      //   url: './Images/holophase-video.mp4',
       //   alt: 'Project video',
-      //   thumbnail: './Images/foghacks-thumbnail.jpg' // Optional thumbnail
+      //   thumbnail: './Images/holophase-thumbnail.jpg' // Optional thumbnail
       // }
     ],
     // Thumbnail for project cards (first image or specific thumbnail)
-    thumbnail: './Images/foghacks.jpg', // Replace with your actual image file
+    thumbnail: './Images/HoloPhase_main.png', // Replace with your actual image file
     // Description section - you can add your detailed description here
     description: `
     <h3>Overview</h3>
     <p>Turbid media such as fog result in constantly changing scattering patterns that distort images. 
     We use a Digital Micromirror Device (DMD) to correct for these effects by modulating the phase of 
-    the light passing through the scattering medium. By training a neural network in combination with 
-    an image-quality scoring model, our system updates the DMD pattern to undo the wavefront distortion 
-    introduced by the scattering media. This is an ongoing group project for my senior design course, 
+    the light passing through the scattering medium. By using a Physics Informed Supervised Learning approach, 
+    our system updates the DMD pattern to undo the wavefront distortion 
+    introduced by the scattering media. This was a group project for my senior design course 
     advised by Dr. Fei Xia at UCI.</p>
     
     <h3>What I Did</h3>
-    <p>Simulated ray propagation and complex random fog scattering patterns to train the neural network. Implemented an algorithm to convert a target image to SLM Computer Generated Hologram (CGH), and then to a DMD pattern using the Lee Hologram Technique.
+    <p>Simulated wave propagation and diffraction through scattering patterns to use as the differentiable forward model. 
+    Implemented an algorithm to convert a target image to SLM Computer Generated Hologram (CGH), and then to a DMD pattern using the Lee Hologram technique.
+    Used Tensor Flow to optimize the CGH pattern through a gradient based Adam optimizer to correct for the scattering effects and restore the original image.
     Designed and built the optical setup to test the system including a 4f system to image the DMD pattern, a camera to capture the image, and coherent light source.</p>
     
     <h3>Technologies & Tools</h3>
     <ul>
+      <li>Python</li>
       <li>Computational Optics</li>
-      <li>Neural Networks</li>
+      <li>Tensor Flow</li>
+      <li>Inverse Design</li>
       <li>Image Correction</li>
       <li>Optical Design</li>
       <li>SLM Hardware</li>
     </ul>
     
     <h3>Results</h3>
-    <p><i>Check back soon for results!</i></p>`
+    <p><i>The optical set up successfuly demonstrated the projection of images using Lee Hologram based binary patterns, and their filtering through the 4f system (Image 2 & 3).
+    The Foward model successfully simulated the scattering effects of the fog and the optimization algorithm was able to learn a delta mask that can be applied to new patterns to correct for the scattering effects.
+    The optimizer showed a overall 16.7% increase in the image quality of the corrected images compared to the uncorrected images, as measured by the Mean Squared Error (MSE) (see Image 4). 
+    On untrained data the optimizer performed similarly with a 15.3% increase in correction (see Image 5).
+    </i></p>`
   },
   {
     id: 'hbn-quantum',
