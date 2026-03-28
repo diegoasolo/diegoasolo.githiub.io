@@ -4,7 +4,7 @@ const PROJECTS = [
   {
     id: 'holophase',
     title: 'HoloPhase — Adaptive Imaging Through Fog',
-    tags: ['Computational Optics', 'Neural Networks', 'Tensor Flow', 'Python'],
+    tags: ['Computational Optics', 'Tensor Flow', 'Python', 'Inverse Design'],
     shortDescription: 'Using SLM hardware and deep learning to correct images through scattering media.',
     // Multiple images/videos that will cycle in carousel
     // Use relative paths: './Images/filename.jpg' or './Images/filename.png'
