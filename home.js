@@ -52,6 +52,30 @@ if (grid) {
 const cycleEl = document.getElementById('cycleText');
 if (cycleEl) {
   const words = ['Diego', 'an Electrical Engineer', 'a Photonics Researcher', 'a Musician', 'a Coffee Lover'];
+  const titleEl = cycleEl.closest('.hero-title');
+
+  // Reserve exactly as much height as the tallest word needs (it may wrap
+  // to more lines than others at narrow widths) so the title never grows
+  // or shrinks — and nothing below it shifts — as the word cycles.
+  function sizeHeroTitle(){
+    if (!titleEl) return;
+    const savedText = cycleEl.textContent;
+    titleEl.style.minHeight = '0';
+    let maxHeight = 0;
+    words.forEach(w => {
+      cycleEl.textContent = w;
+      maxHeight = Math.max(maxHeight, titleEl.offsetHeight);
+    });
+    cycleEl.textContent = savedText;
+    titleEl.style.minHeight = maxHeight + 'px';
+  }
+  sizeHeroTitle();
+  let titleResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(titleResizeTimer);
+    titleResizeTimer = setTimeout(sizeHeroTitle, 150);
+  });
+
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) {
     cycleEl.textContent = words[0];
@@ -438,9 +462,14 @@ if (cycleEl) {
     if (!pathEl || !pulseMain) return;
     const viewportCenter = window.scrollY + window.innerHeight * 0.5;
     let progress = (viewportCenter - layerTopDoc) / layerHeight;
-    progress = Math.max(0, Math.min(1, progress));
-    const headLen = progress * pathLength;
-    const tailLen = Math.max(0, headLen - PULSE_LEN);
+    // Extend past progress=1 by the pulse's own length so the tail can catch
+    // up to the (now fixed) head at the end coupler and the beam shrinks
+    // away there, mirroring how it grows from nothing at the start coupler.
+    const maxProgress = 1 + PULSE_LEN / pathLength;
+    progress = Math.max(0, Math.min(maxProgress, progress));
+    const virtualHeadLen = progress * pathLength;
+    const headLen = Math.min(virtualHeadLen, pathLength);
+    const tailLen = Math.max(0, Math.min(virtualHeadLen - PULSE_LEN, pathLength));
 
     const overlapsMod = modStartLen != null && headLen >= modStartLen && tailLen <= modEndLen;
     const overlapsRingLoop = ringWindowStart != null && headLen >= ringWindowStart && tailLen <= ringLoopEnd;

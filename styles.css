@@ -56,7 +56,7 @@ nav { display:flex; align-items:center; justify-content:space-between; gap:16px;
 /* ====== Hero ====== */
 .hero { padding: 64px 0 48px; }
 .eyebrow { color: var(--accent-strong); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; font-size:13px; margin:0 0 6px; }
-.hero-title { font-size: clamp(36px, 6vw, 60px); line-height:1.08; margin: 4px 0 16px; min-height: 3.3em; }
+.hero-title { font-size: clamp(36px, 6vw, 60px); line-height:1.08; margin: 4px 0 16px; min-height: 1.2em; }
 .cycle-text { color: var(--accent-strong); }
 .cursor { display:inline-block; width:3px; height:0.85em; background: var(--accent-strong); margin-left:3px; vertical-align:-0.05em; animation: blink 1s step-end infinite; }
 @keyframes blink { 50% { opacity:0; } }
