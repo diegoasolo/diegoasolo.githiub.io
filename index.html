@@ -14,7 +14,7 @@
         <a class="brand" href="#home">Diego Solorzano</a>
         <div class="navlinks">
           <a href="projects.html">Projects</a>
-          <a href="#about">About</a>
+          <a href="about.html">About</a>
           <a href="#contact">Contact</a>
           <a class="btn primary" href="#" id="resumeLink">Resume</a>
           <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">◑</button>
@@ -24,18 +24,29 @@
   </header>
 
   <main id="home" class="container">
+    <div class="circuit-layer" id="circuitLayer" aria-hidden="true">
+      <svg id="circuitSvg">
+        <defs>
+          <filter id="pulseGlow" filterUnits="userSpaceOnUse" x="-5000" y="-5000" width="10000" height="10000">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
+    </div>
     <section class="hero grid cols-2">
-      <div>
-        <p class="muted">Portfolio</p>
-        <h1>Diego Solorzano</h1>
-        <p style="font-size:20px; margin:6px 0 12px">Electrical Engineer & Photonics Researcher</p>
-        <p class="muted" style="font-size: 18px;">Hi, I'm Diego, an M.S./Ph.D. student in Electrical and Computer Engineering at the University of California, 
-          Los Angeles. I received my B.S in Electrical Engineering with a specialization in semiconductors and optical electroncis from the University of California, Irvine in 2026.
-          <br> <br> I’ve worked on a wide range of engineering projects from PCB design to computational optics. 
-          My primary interest is the physics and engineering of optoelectronic and 
-          nanophotonic devices. I’m particularly interested in terahertz photonics, quantum devices, and photonic integrated circuits. 
-          <br> <br>  Feel free to explore my projects below. </p>
-        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio</p>
+        <h1 class="hero-title">Hi, I'm <span class="cycle-text" id="cycleText" aria-live="polite"></span><span class="cursor" aria-hidden="true"></span></h1>
+        <p class="lede">M.S./Ph.D. student in Electrical and Computer Engineering at UCLA, working on terahertz
+          photonics and qunatum cascade lasers. I received my B.S. in Electrical
+          Engineering, specializing in semiconductors and optical electronics, from UC Irvine in 2026.
+          <br><br> I've worked on projects spanning PCB design to computational optics to single photon emitters. Feel free to explore
+          them below, or <a href="about.html" style="color:var(--accent-strong); text-decoration:underline;">learn more about me</a>.</p>
+        <div id="heroCtas" style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
           <a class="btn" id="githubLink" href="#">GitHub</a>
           <a class="btn" id="linkedinLink" href="#">LinkedIn</a>
           <a class="btn primary" id="emailLink" href="#">Email me</a>
@@ -51,7 +62,7 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2> Featured Projects</h2>
       <div id="projectGrid" class="grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));"></div>
       <div style="margin-top: 24px;">
         <a href="projects.html" class="btn">View all projects →</a>
@@ -59,23 +70,12 @@
     </section>
 
     <section id="about">
-      <div class="grid cols-2" style="align-items:end">
-        <h2>About</h2>
-        <h2>Skills</h2>
-      </div>
-      <div class="grid cols-2" style="align-items:start">
-        <p class="muted">
-          I'm a first-year PhD student at UCLA, focusing on terahertz photonics and quantum cascade lasers. 
-          During my undergrad at UCI, i gained experience in semiconductor fabrication, MEMS devices, optical devices, nano-optics, and quantum computing.
-          I've taken extensive coursework in these areas, and have a strong foundation in the principles and applications of each.
-          <br> <br>
-          Outside of academics, I love all things music related, especially playing the guitar and piano. 
-          You can find me at the piano making original music or improvising on the guitar.
-        </br>You can check out my music on Spotify <a href="https://open.spotify.com/artist/0M2w29DNkvMy1ibgbyNyRK?si=OrMHPibTRDimIOg5K0JHJg" style="text-decoration: underline;" target="_blank" rel="noopener">here</a>!
-        </br></br>I also really enjoy reading novels, doing photography, and rock climbing!
-        </p>
-        <div class="skills" id="skills"></div>
-      </div>
+      <h2>About</h2>
+      <p class="muted" style="font-size:18px; max-width:640px;">
+        I'm a first-year Ph.D. student at UCLA in the Terahertz and Infrared Photonics Group. I am passionate about all things photonics, and improving education and oppertunites within the eningeering community for everyone. 
+        Outside the lab, I'm usually at the piano composing music, playing chess, or brewing coffee.
+      </p>
+      <a class="btn primary" id="aboutMoreBtn" href="about.html">More about me →</a>
     </section>
 
     <section id="contact">
@@ -108,7 +108,7 @@
       <div>© <span id="year"></span> Diego Solorzano. All rights reserved.</div>
       <div style="display:flex; gap:12px">
         <a href="projects.html">Projects</a>
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
         <a href="#home">Back to top ↑</a>
       </div>
     </div>
