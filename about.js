@@ -1,7 +1,7 @@
 // ====== Quick personalization ======
 const LINKS = {
   resume: './Images/CV_diego_solorzano.pdf',
-  email: 'diegoasolo12@gmail.com'
+  email: 'diegosolo@ucla.edu'
 };
 
 const SKILLS = ['Table Top Optics','FDTD/Lumerical','COMSOL','PCB Design (Altium)','MATLAB','Python','C/C++','Embedded Systems','Raspberry Pi', 'Arduino', 'Oscilloscope'];
